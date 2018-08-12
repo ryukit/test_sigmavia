@@ -1,0 +1,90 @@
+.introBanner {
+  padding: 80px 0 50px;
+  background: url('../assets/header_image.png') 50% 50% no-repeat;
+  background-size: cover;
+  @media only screen and ( -webkit-min-device-pixel-ratio: 2 ),
+         only screen and ( -moz-min-device-pixel-ratio: 2 ),
+         only screen and ( -o-min-device-pixel-ratio: 2/1 ),
+         only screen and ( min-device-pixel-ratio: 2 ) {
+    background-image: url('../assets/header_image@2x.png');
+  }
+  @include media-breakpoint-up(md) {
+    padding: 130px 0 115px;
+  }
+
+  &--fullHeight {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @include media-breakpoint-up(md) {
+      justify-content: space-between;
+    }
+  }
+  &-logo {
+    max-width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 60px;
+    @include media-breakpoint-up(md) {
+      max-width: none;
+    }
+  }
+  h1 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: rem-calc(30);
+    line-height: 1;
+    text-align: center;
+    color: $red;
+    @include media-breakpoint-up(sm) {
+      font-size: rem-calc(42);
+    }
+    @include media-breakpoint-up(md) {
+      font-size: rem-calc(64);
+    }
+  }
+  h2 {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    font-size: rem-calc(24);
+    line-height: 1;
+    text-align: center;
+    color: $purple-darker;
+    @include media-breakpoint-up(sm) {
+      font-size: rem-calc(30);
+    }
+    @include media-breakpoint-up(md) {
+      font-size: rem-calc(36);
+    }
+  }
+  h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: $fontSize-large;
+    line-height: 1.2;
+    text-align: center;
+    color: $red;
+    @include media-breakpoint-up(sm) {
+      font-size: $fontSize-largest;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: rem-calc(30);
+    }
+  }
+  .cursiveText {
+    margin-bottom: 15px;
+    font-weight: $fontWeight-bold;
+    font-size: $fontSize-large;
+    font-style: italic;
+    line-height: 1;
+    color: $purple-darker;
+    text-align: center;
+    @include media-breakpoint-up(sm) {
+      font-size: $fontSize-larger;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: $fontSize-largest;
+    }
+  }
+}
